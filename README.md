@@ -1,5 +1,5 @@
-# Chatwork
-Recipe for [Chatwork](https://www.chatwork.com) integration with [Franz 5](http://meetfranz.com)
+# ChatWork
+Recipe for [ChatWork](https://www.chatwork.com) integration with [Franz 5](http://meetfranz.com)
 
 ## To test this dev release
 
