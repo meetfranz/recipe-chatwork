@@ -20,4 +20,5 @@ Recipe for [ChatWork](https://www.chatwork.com) integration with [Franz 5](http:
 [Read the documentation](https://github.com/meetfranz/plugins)
 
 ## Authors
-[Koma](https://github.com/koma-private/)
+  * [Koma](https://github.com/koma-private/)
+  * [hideosasaki](https://github.com/hideosasaki)
