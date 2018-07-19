@@ -16,7 +16,7 @@ module.exports = (Franz, options) => {
         count = parseInt(unreadBadge.innerText);
       }
       if (0 < count) {
-        if (room.querySelector("img.avatarGroup")) {
+        if (room.querySelector("img.avatarMedium").getAttribute('src').indexOf('avatar') < 0) {
           groupCount += count;
           if (unreadBadgeHasMention) {
             directCount++;
