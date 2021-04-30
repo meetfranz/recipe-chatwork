@@ -6,18 +6,21 @@ module.exports = (Franz, options) => {
     let individualCount = 0;
     let directCount = 0;
     let indirectCount = 0;
-    let roomInfoContainer = document.querySelectorAll('li.sc-dnqmqq');
+    let roomInfoContainer = document.querySelectorAll('div#RoomList > ul > li');
 
     Array.prototype.forEach.call(roomInfoContainer, function (room) {
       let count = 0;
 
-      let unreadBadge = room.querySelector("span.sc-kAzzGY");
-      let unreadBadgeHasMention = room.querySelector("li._unreadBadge.sc-cSHVUG");
+      let unreadBadge = room.querySelector('li._unreadBadge > span');
+      let unreadBadgeHasMention = false;
+      if (unreadBadge) {
+        unreadBadgeHasMention = window.getComputedStyle(room.querySelector('li._unreadBadge'), ':after').getPropertyValue('background-color') != 'rgba(0, 0, 0, 0)';
+      }
       if (unreadBadge && unreadBadge.innerText) {
         count = parseInt(unreadBadge.innerText);
       }
       if (0 < count) {
-        if (room.querySelector("img.sc-gqjmRU").getAttribute('src').indexOf('avatar') < 0) {
+        if (room.querySelector("img").getAttribute('src').indexOf('avatar') < 0) {
           groupCount += count;
           if (unreadBadgeHasMention) {
             directCount++;
