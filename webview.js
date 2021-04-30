@@ -6,7 +6,7 @@ module.exports = (Franz, options) => {
     let individualCount = 0;
     let directCount = 0;
     let indirectCount = 0;
-    let roomInfoContainer = document.querySelectorAll('roomlist > ul > li');
+    let roomInfoContainer = document.querySelectorAll('div#RoomList > ul > li');
 
     Array.prototype.forEach.call(roomInfoContainer, function (room) {
       let count = 0;
